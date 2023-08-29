@@ -18,12 +18,14 @@
           <li class="nav-item">
             <a class="nav-link" href="/WasteMaterialPage">Waste material</a>
           </li>
-          <li class="nav-item">
+          <!-- Use v-if to conditionally show/hide the Login and Register buttons -->
+          <li class="nav-item" v-if="!isLoggedIn">
             <a class="nav-link" href="/login">Login</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" v-if="!isLoggedIn">
             <a class="nav-link" href="/register">Register</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="/aboutUs">About us</a>
           </li>
@@ -39,14 +41,18 @@
             </a>
             <ul class="dropdown-menu">
               <!--NB the "<li></li>" only exists inside an "<ol></ol>"(odered list) or "<ul></ul>"(unodered list)-->
-              <li><a class="dropdown-item" href="">Waste material</a></li>
               <li><a class="dropdown-item" href="">Null</a></li>
-
+              <li><a class="dropdown-item" href="">Null</a></li>
               <!-- <li><hr class="dropdown-divider" /></li>
                 <li><a class="dropdown-item" href="/">Something else here</a></li> -->
             </ul>
           </li>
+          <!-- Display the "Logout" link only if logged in -->
+          <li class="nav-item" v-if="isLoggedIn">
+            <a class="nav-link" @click="logout" href="/">Logout</a>
+          </li>
         </ul>
+
         <form class="d-flex" role="search">
           <input
             class="form-control me-2"
@@ -61,7 +67,27 @@
   </nav>
 </template>
 
-<script></script>
+<script>
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      isLoggedIn: true, // Set this value based on the user's authentication status
+    };
+  },
+
+  methods: {
+    async logout() {
+      const response = await axios.post("http://127.0.0.1:8000/api/logout", {});
+      // Perform logout logic here, e.g., making an API request to log out
+
+      // After successful logout, navigate to the home page
+      this.$router.push("/");
+    },
+  },
+};
+</script>
 
 <style scoped>
 .container-fluid {
