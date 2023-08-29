@@ -16,7 +16,10 @@
                   <div class="form-group">
                     <label for="name" class="text-info">Company Name:</label
                     ><br />
+                    <!-- the required property checks if the text field is filled,
+                    if it is not it displays a snackbar urging the user to fill it-->
                     <input
+                      autocomplete="off"
                       type="text"
                       name="name"
                       id="name"
@@ -30,6 +33,7 @@
                       >Company Email Address:</label
                     ><br />
                     <input
+                      autocomplete="off"
                       type="text"
                       name="email"
                       id="email"
@@ -39,9 +43,10 @@
                     />
                   </div>
                   <div class="form-group">
-                    <label for="country" class="text-info">Location:</label
+                    <label for="country" class="text-info">country:</label
                     ><br />
                     <input
+                      autocomplete="off"
                       type="text"
                       name="country"
                       id="country"
@@ -51,22 +56,25 @@
                     />
                   </div>
                   <div class="form-group">
-                    <label for="waste_product_produced" class="text-info"
+                    <label for="waste_material_produced" class="text-info"
                       >Waste material Produced:</label
                     ><br />
                     <input
+                      autocomplete="off"
                       type="text"
-                      name="waste_product_produced"
-                      id="waste_product_produced"
+                      name="waste_material_produced"
+                      id="waste_material_produced"
                       class="form-control"
-                      v-model="waste_product_produced"
+                      v-model="waste_material_produced"
                       required
                     />
                   </div>
                   <div class="form-group">
-                    <label for="phone_number" class="text-info">Phone Number:</label
+                    <label for="phone_number" class="text-info"
+                      >Phone Number:</label
                     ><br />
                     <input
+                      autocomplete="off"
                       type="text"
                       name="phone_number"
                       id="phone_number"
@@ -79,6 +87,7 @@
                     <label for="password" class="text-info">Password:</label
                     ><br />
                     <input
+                      autocomplete="off"
                       type="password"
                       name="password"
                       id="password"
@@ -140,8 +149,8 @@ export default {
       name: "",
       email: "",
       country: "",
-      waste_product_produced: "",
-      phone_number:"",
+      waste_material_produced: "",
+      phone_number: "",
       password: "",
       password_confirmation: "",
     };
@@ -152,9 +161,11 @@ export default {
       const response = await axios.post("http://127.0.0.1:8000/api/register", {
         name: this.name,
         email: this.email,
+        country: this.country,
+        waste_material_produced: this.waste_material_produced,
+        phone_number: this.phone_number,
         password: this.password,
         password_confirmation: this.password_confirmation,
-        subcounty_id: this.subcounty,
       });
       setTimeout(() => {
         router.push("/login");
@@ -166,10 +177,28 @@ export default {
 
 <style>
 body {
+  background-color: rgb(247, 245, 251);
   height: 800px; /* Set the desired height for the scrollable container */
   overflow: auto; /* Enable scrolling if content overflows the container */
 }
 #trial {
   margin-top: 40px;
+}
+.form-control {
+  margin-top: 2px;
+  height: 40px;
+  width: 520px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: rgb(247, 245, 251);
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: 300ms ease-in-out;
+}
+.form-control:focus {
+  background-color: white;
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #969696, -13px -13px 100px #ffffff;
 }
 </style>
