@@ -17,25 +17,32 @@
                     <label for="email" class="text-info"
                       >Company Email Address:</label
                     ><br />
+                    <!-- the required property checks if the text field is filled,
+                    if it is not it displays a snackbar urging the user to fill it-->
                     <input
+                      autocomplete="off"
                       type="text"
                       name="email"
                       id="email"
                       class="form-control"
                       v-model="email"
+                      required
                     />
                   </div>
                   <div class="form-group">
                     <label for="password" class="text-info">Password:</label
                     ><br />
+
                     <input
                       type="password"
                       name="password"
                       id="password"
                       class="form-control"
                       v-model="password"
+                      required
                     />
                   </div>
+
                   <div class="form-group">
                     <label for="remember-me" class="text-info"
                       ><span>Remember me</span> <span
@@ -106,11 +113,29 @@ export default {
 }
 
 #body {
+  background-color: rgb(247, 245, 251);
   height: 500px; /* Set the desired height for the scrollable container */
   overflow: auto; /* Enable scrolling if content overflows the container */
 }
 .form-group {
   margin-top: 20px;
+}
+.form-control {
+  margin-top: 2px;
+  height: 40px;
+  width: 520px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: rgb(247, 245, 251);
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: 300ms ease-in-out;
+}
+.form-control:focus {
+  background-color: white;
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #969696, -13px -13px 100px #ffffff;
 }
 #buttons {
   display: flex;
