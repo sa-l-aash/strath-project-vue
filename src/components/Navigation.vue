@@ -73,7 +73,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      isLoggedIn: true, // Set this value based on the user's authentication status
+      isLoggedIn: false, // Set this value based on the user's authentication status
     };
   },
 
@@ -90,8 +90,17 @@ export default {
 </script>
 
 <style scoped>
+.navbar-brand{
+  color: black;
+  font-weight: bolder;
+}
+.nav-link{
+  color: black;
+  font-weight: bolder;
+}
+
 .container-fluid {
-  background-color: rgb(76, 185, 68);
+  background-color: rgb(76, 185, 68, 1);
   position: fixed;
   padding-top: 30px;
   padding-bottom: 10px;
@@ -99,6 +108,7 @@ export default {
   margin-bottom: 20px;
 }
 .btn-outline-success {
+  font-weight: bolder;
   color: black;
   background-color: rgb(76, 185, 68);
 }
