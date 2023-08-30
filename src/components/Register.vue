@@ -26,6 +26,7 @@
                       class="form-control"
                       v-model="name"
                       required
+                      
                     />
                   </div>
                   <div class="form-group">
@@ -55,6 +56,7 @@
                       required
                     />
                   </div>
+                <div class="wasteAndAmount">
                   <div class="form-group">
                     <label for="waste_material_produced" class="text-info"
                       >Waste material Produced:</label
@@ -69,6 +71,21 @@
                       required
                     />
                   </div>
+                  <div class="form-group">
+                    <label for="amount" class="text-info"
+                      >Amount:</label
+                    ><br />
+                    <input
+                      autocomplete="off"
+                      type="text"
+                      name="amount"
+                      id="amount"
+                      class="form-control"
+                      v-model="amount"
+                      required
+                    />
+                  </div>
+                </div>
                   <div class="form-group">
                     <label for="phone_number" class="text-info"
                       >Phone Number:</label
@@ -150,6 +167,7 @@ export default {
       email: "",
       country: "",
       waste_material_produced: "",
+      amount:"",
       phone_number: "",
       password: "",
       password_confirmation: "",
@@ -163,6 +181,7 @@ export default {
         email: this.email,
         country: this.country,
         waste_material_produced: this.waste_material_produced,
+        amount: this.amount,
         phone_number: this.phone_number,
         password: this.password,
         password_confirmation: this.password_confirmation,
@@ -180,6 +199,7 @@ body {
   background-color: rgb(247, 245, 251);
   height: 800px; /* Set the desired height for the scrollable container */
   overflow: auto; /* Enable scrolling if content overflows the container */
+  
 }
 #trial {
   margin-top: 40px;
