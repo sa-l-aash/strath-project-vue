@@ -12,8 +12,8 @@
           </h3>
 
           <h4 id="info">
-            If we are not careful our forests, rivers and oceans will be full of
-            waste leading to global warming and death of land and aquatic
+            If we are not careful our forests, rivers and oceans will be filled
+            with waste leading to global warming and death of land and aquatic
             animals.
           </h4>
           <h3 id="mostProducedWasteProduct">
@@ -64,7 +64,6 @@ export default {
   color: rgb(255, 255, 255);
 }
 #soldButton {
-  width: 350px;
   height: 300px;
   border-radius: 20px;
   background-color: rgb(76, 185, 68, 0.9);
@@ -88,16 +87,14 @@ export default {
 }
 
 #soldInfoProduced {
+  font-weight: bolder;
   color: ghostwhite;
   margin-top: 60px;
   text-align: center;
   display: flex;
   justify-content: space-between;
-
 }
 #mostSoldWasteProduct {
- 
- 
   margin-left: 25px;
   border-radius: 20px;
   width: 30%;
@@ -118,6 +115,8 @@ export default {
   width: 30%;
 }
 .body {
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  background-size: cover; /* Scales the background image to cover the container */
   margin: 50px;
   margin-top: 38px;
   border-bottom-left-radius: 20px;
