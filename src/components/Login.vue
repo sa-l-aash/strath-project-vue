@@ -108,6 +108,9 @@ export default {
 
 <!--scoped means that these styles only apply to id's or classes in this file-->
 <style scoped>
+.text-center {
+  margin-top: 20px;
+}
 .password-input {
   position: relative;
 }
