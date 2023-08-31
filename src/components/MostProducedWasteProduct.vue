@@ -62,7 +62,8 @@ export default {
 #title1 {
   background-color: rgb(76, 185, 68, 0.8);
   border-radius: 20px;
-
+  padding-left: 15px;
+  padding-right: 15px;
   margin-right: 25px;
 }
 #title2 {
