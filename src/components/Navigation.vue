@@ -37,24 +37,7 @@
           <li class="nav-item">
             <a class="nav-link" href="/aboutUs">About us</a>
           </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="/"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              More
-            </a>
-            <ul class="dropdown-menu">
-              <!--NB the "<li></li>" only exists inside an "<ol></ol>"(odered list) or "<ul></ul>"(unodered list)-->
-              <li><a class="dropdown-item" href="">Null</a></li>
-              <li><a class="dropdown-item" href="">Null</a></li>
-              <!-- <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="/">Something else here</a></li> -->
-            </ul>
-          </li>
+
           <!-- Display the "Logout" link only if logged in -->
           <li class="nav-item" v-if="isLoggedIn">
             <a class="nav-link" @click="logout" href="/">Logout</a>
@@ -81,7 +64,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      isLoggedIn: false, // Set this value based on the user's authentication status
+      isLoggedIn: true, // Set this value based on the user's authentication status
     };
   },
 
@@ -98,9 +81,8 @@ export default {
 </script>
 
 <style scoped>
-
-.navbar-collapse{
-  overflow-y: auto
+.navbar-collapse {
+  overflow-y: auto;
 }
 /* this is the search bar */
 .d-flex {
