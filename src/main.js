@@ -7,6 +7,8 @@ import login from "./components/Login.vue";
 import register from "./components/Register.vue";
 import aboutUs from "./components/AboutUs.vue";
 import wasteMaterialPage from "./components/WasteMaterialPage.vue";
+import mostSoldWasteProductPage from "./components/MostSoldWasteProductPage.vue";
+import mostProducedWasteProductPage from "./components/MostProducedWasteProduct.vue";
 
 // here we create routes to our various pages
 const routes = [
@@ -34,6 +36,16 @@ const routes = [
     name: "WasteMaterialPage",
     path: "/WasteMaterialPage",
     component: wasteMaterialPage,
+  },
+  {
+    name: "MostSoldWasteProductPage",
+    path: "/MostSoldWasteProductPage",
+    component: mostSoldWasteProductPage,
+  },
+  {
+    name: "MostProducedWasteProductPage",
+    path: "/MostProducedWasteProductPage",
+    component: mostProducedWasteProductPage,
   },
 ];
 //here we initialize the routes
