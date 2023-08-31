@@ -18,6 +18,14 @@
           <li class="nav-item">
             <a class="nav-link" href="/WasteMaterialPage">Waste material</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/MostSoldWasteProductPage">Most Sold </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/MostProducedWasteProductPage"
+              >Most Produced
+            </a>
+          </li>
           <!-- Use v-if to conditionally show/hide the Login and Register buttons -->
           <li class="nav-item" v-if="!isLoggedIn">
             <a class="nav-link" href="/login">Login</a>
@@ -90,22 +98,30 @@ export default {
 </script>
 
 <style scoped>
-.navbar-brand{
+
+.navbar-collapse{
+  overflow-y: auto
+}
+/* this is the search bar */
+.d-flex {
+  width: 300px;
+}
+.navbar-brand {
   color: black;
   font-weight: bolder;
 }
-.nav-link{
+.nav-link {
   color: black;
   font-weight: bolder;
 }
 
 .container-fluid {
-  background-color: rgb(76, 185, 68, 1);
-  position: fixed;
-  padding-top: 30px;
-  padding-bottom: 10px;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  background-color: rgb(76, 185, 68);
+  position: absolute;
+  padding-top: 40px;
+  padding-bottom: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .btn-outline-success {
   font-weight: bolder;

@@ -1,9 +1,7 @@
 <template>
   <navigationbar />
+  <body class="body"></body>
 </template>
-<body class="body">
-  
-</body>
 
 <script>
 import navigationbar from "./Navigation.vue";
@@ -14,9 +12,7 @@ export default {
 };
 </script>
 <style scoped>
-.body{
+.body {
   background-color: rgb(247, 245, 251);
 }
-
-
 </style>

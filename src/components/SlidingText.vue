@@ -25,7 +25,7 @@ export default {
 }
 
 .sliding-text {
-  animation: slide-in 1s forwards;
+  animation: slide-in 2s backwards;
 }
 
 @keyframes slide-in {

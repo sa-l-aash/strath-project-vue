@@ -26,7 +26,6 @@
                       class="form-control"
                       v-model="name"
                       required
-                      
                     />
                   </div>
                   <div class="form-group">
@@ -56,36 +55,35 @@
                       required
                     />
                   </div>
-                <div class="wasteAndAmount">
-                  <div class="form-group">
-                    <label for="waste_material_produced" class="text-info"
-                      >Waste material Produced:</label
-                    ><br />
-                    <input
-                      autocomplete="off"
-                      type="text"
-                      name="waste_material_produced"
-                      id="waste_material_produced"
-                      class="form-control"
-                      v-model="waste_material_produced"
-                      required
-                    />
+                  <div class="wasteAndAmount">
+                    <div class="form-group">
+                      <label for="waste_material_produced" class="text-info"
+                        >Waste material Produced:</label
+                      ><br />
+                      <input
+                        autocomplete="off"
+                        type="text"
+                        name="waste_material_produced"
+                        id="waste_material_produced"
+                        class="form-control"
+                        v-model="waste_material_produced"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="amount" class="text-info">Amount:</label
+                      ><br />
+                      <input
+                        autocomplete="off"
+                        type="text"
+                        name="amount"
+                        id="amount"
+                        class="form-control"
+                        v-model="amount"
+                        required
+                      />
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label for="amount" class="text-info"
-                      >Amount:</label
-                    ><br />
-                    <input
-                      autocomplete="off"
-                      type="text"
-                      name="amount"
-                      id="amount"
-                      class="form-control"
-                      v-model="amount"
-                      required
-                    />
-                  </div>
-                </div>
                   <div class="form-group">
                     <label for="phone_number" class="text-info"
                       >Phone Number:</label
@@ -167,7 +165,7 @@ export default {
       email: "",
       country: "",
       waste_material_produced: "",
-      amount:"",
+      amount: "",
       phone_number: "",
       password: "",
       password_confirmation: "",
@@ -195,11 +193,13 @@ export default {
 </script>
 
 <style>
+.text-center {
+  margin-top: 20px;
+}
 body {
   background-color: rgb(247, 245, 251);
   height: 800px; /* Set the desired height for the scrollable container */
   overflow: auto; /* Enable scrolling if content overflows the container */
-  
 }
 #trial {
   margin-top: 40px;
