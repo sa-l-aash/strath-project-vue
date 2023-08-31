@@ -3,12 +3,11 @@
     <navigationbar />
     <body class="body">
       <sliding-text id="animation" :text="hello">
+        <h1 id="title">#0#Waste</h1>
         <div id="soldInfoProduced">
           <h3 id="mostSoldWasteProduct">
-            <button id="soldButton">
-              Most sold waste product.<br />1. Plastic <br />2. Metal <br />3.
-              Paper
-            </button>
+            Most sold waste product.<br />1. Plastic <br />2. Metal <br />3.
+            Paper
           </h3>
 
           <h4 id="info">
@@ -17,10 +16,8 @@
             animals.
           </h4>
           <h3 id="mostProducedWasteProduct">
-            <button id="producedButton">
-              Most produced waste product. <br />1. MSW <br />
-              2. Agricultural waste <br />3. Hazardous
-            </button>
+            Most produced waste product. <br />1. MSW <br />
+            2. Agricultural waste <br />3. Hazardous
           </h3>
         </div>
       </sliding-text>
@@ -56,20 +53,15 @@ export default {
 </script>
 
 <style scoped>
-#producedButton {
-  height: 300px;
-  border-radius: 20px;
-  background-color: rgb(76, 185, 68, 0.9);
-  border-width: 0ch;
-  color: rgb(255, 255, 255);
+#title {
+  font-style: oblique;
+  text-align: center;
+  color: ghostwhite;
+  font-weight: bolder;
+  font-size: 40px;
 }
-#soldButton {
-  height: 300px;
-  border-radius: 20px;
-  background-color: rgb(76, 185, 68, 0.9);
-  border-width: 0ch;
-  color: rgb(255, 255, 255);
-}
+
+
 #body2 {
   text-align: center;
   margin-left: 50px;
@@ -82,11 +74,12 @@ export default {
 .site {
   display: flex;
   flex-direction: column;
-  height: 800px; /* Set the desired height for the scrollable container */
+  height: 900px; /* Set the desired height for the scrollable container */
   overflow: auto; /* Enable scrolling if content overflows the container */
 }
 
 #soldInfoProduced {
+ 
   font-weight: bolder;
   color: ghostwhite;
   margin-top: 60px;
@@ -95,6 +88,10 @@ export default {
   justify-content: space-between;
 }
 #mostSoldWasteProduct {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  border-width: 0ch;
+  color: rgb(255, 255, 255);
   margin-left: 25px;
   border-radius: 20px;
   width: 30%;
@@ -103,7 +100,11 @@ export default {
   background-color: rgb(76, 185, 68, 0.9);
 }
 #mostProducedWasteProduct {
+  padding-bottom: 30px;
   margin-right: 25px;
+  padding-top: 30px;
+  border-width: 0ch;
+  color: rgb(255, 255, 255);
   border-radius: 20px;
   width: 30%;
   padding-right: 0px;
