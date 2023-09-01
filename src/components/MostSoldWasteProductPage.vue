@@ -1,15 +1,14 @@
 <template>
-  <body class="site">
+  <div class="site">
     <navigationbar />
-    <div class="body1">
-      <sliding-text id="animation" :text="hello">
-        <h2 id="content">Most sold waste product in Africa</h2>
-      </sliding-text>
-      <div id="text">
-        <sliding-text id="animation" :text="hello">
-          <h3 id="title">Plastic</h3>
-        </sliding-text>
-        <sliding-text2 id="animation" :text="hi">
+    <div class="content">
+      <sliding-text class="text" id="sliding-text"
+        >Most sold waste product in Africa</sliding-text
+      >
+
+      <div class="text">
+        <sliding-text id="sliding-text">Plastic</sliding-text>
+        <sliding-text2 id="sliding-text2">
           <h4>
             Plastic is a major pollutant in Africa, and it is often recycled and
             sold to be used in other products. Plastic waste can be used to make
@@ -17,11 +16,10 @@
           </h4>
         </sliding-text2>
       </div>
-      <div id="text">
-        <sliding-text id="animation" :text="hello">
-          <h3 id="title">Metal</h3>
-        </sliding-text>
-        <sliding-text2 id="animation" :text="hi">
+
+      <div class="text">
+        <sliding-text id="sliding-text">Metal</sliding-text>
+        <sliding-text2 id="sliding-text2">
           <h4>
             Metal is another valuable waste product that can be recycled and
             sold. Metal waste can be used to make new products such as cars,
@@ -29,11 +27,10 @@
           </h4>
         </sliding-text2>
       </div>
-      <div id="text">
-        <sliding-text id="animation" :text="hello">
-          <h3 id="title">Paper</h3>
-        </sliding-text>
-        <sliding-text2 id="animation" :text="hi">
+
+      <div class="text">
+        <sliding-text id="sliding-text">Paper</sliding-text>
+        <sliding-text2 id="sliding-text2">
           <h4>
             Paper is a renewable resource, and it can be recycled and sold to be
             used to make new products such as cardboard.
@@ -41,7 +38,7 @@
         </sliding-text2>
       </div>
     </div>
-  </body>
+  </div>
 </template>
 
 <script>
@@ -50,54 +47,46 @@ import SlidingText from "./SlidingText.vue";
 import SlidingText2 from "./SlidingText2.vue";
 
 export default {
-  data() {
-    return {
-      hello: "Hello, World",
-      hi: "hi",
-    };
-  },
   components: {
-    SlidingText2,
     SlidingText,
+    SlidingText2,
     navigationbar,
   },
 };
 </script>
+
 <style scoped>
 .site {
   background-image: url("https://images.pexels.com/photos/3264779/pexels-photo-3264779.jpeg?auto=compress&cs=tinysrgb&w=600");
-  background-repeat: no-repeat; /* Prevents the background image from repeating */
-  background-size: cover; /* Scales the background image to cover the container */
-  height: 900px; /* Set the desired height for the scrollable container */
-  overflow: auto; /* Enable scrolling if content overflows the container */
-}
-#title {
-  margin-top: 40px;
-  text-align: center;
-  /* background-color: rgb(76, 185, 68, 0.8); */
-  border-radius: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+  overflow: auto;
 }
 
-#content {
+.content {
   color: ghostwhite;
-  margin-top: 40px;
+  margin-top: 50px;
   text-align: center;
 }
-.body1 {
-  margin-top: 35px;
-  margin-right: 100px;
-  margin-left: 100px;
+
+.text {
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
-#text {
-  color: ghostwhite;
-  border-radius: 20px;
-  /* background-color: rgba(255, 255, 255, 0.7); */
+
+/* Apply specific styles for sliding-text and sliding-text2 */
+#sliding-text {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#sliding-text2 {
   margin-top: 20px;
+  border-radius: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  /* display: flex; */
 }
 </style>
