@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 .sliding-text-container {
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .sliding-text {

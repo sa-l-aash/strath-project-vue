@@ -60,8 +60,6 @@ export default {
   font-weight: bolder;
   font-size: 40px;
 }
-
-
 #body2 {
   text-align: center;
   margin-left: 50px;
