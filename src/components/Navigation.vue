@@ -100,8 +100,8 @@ export default {
 .container-fluid {
   background-color: rgb(76, 185, 68);
   position: absolute;
-  padding-top: 40px;
-  padding-bottom: 5px;
+  padding-top: 50px;
+  padding-bottom: 15px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
