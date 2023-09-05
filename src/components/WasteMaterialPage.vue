@@ -1,6 +1,8 @@
 <template>
-  <navigationbar />
-  <body class="body"></body>
+  <div class="site">
+    <navigationbar />
+    <div class="content"></div>
+  </div>
 </template>
 
 <script>
@@ -12,7 +14,17 @@ export default {
 };
 </script>
 <style scoped>
-.body {
-  background-color: rgb(247, 245, 251);
+.site {
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+  overflow: auto;
+}
+
+.content {
+  color: ghostwhite;
+  margin-top: 50px;
+  text-align: center;
 }
 </style>
