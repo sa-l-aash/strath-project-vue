@@ -64,7 +64,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      isLoggedIn: true, // Set this value based on the user's authentication status
+      isLoggedIn: false, // Set this value based on the user's authentication status
     };
   },
 
