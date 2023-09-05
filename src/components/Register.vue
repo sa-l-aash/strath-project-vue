@@ -43,7 +43,7 @@
                     />
                   </div>
                   <div class="form-group">
-                    <label for="country" class="text-info">country:</label
+                    <label for="country" class="text-info">Country:</label
                     ><br />
                     <input
                       autocomplete="off"
