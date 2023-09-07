@@ -40,7 +40,7 @@
 
           <!-- Display the "Logout" link only if logged in -->
           <li class="nav-item" v-if="isLoggedIn">
-            <a class="nav-link" @click="logout" href="/">Logout</a>
+            <a class="nav-link" @click="logout" href="">Logout</a>
           </li>
         </ul>
 
@@ -64,19 +64,31 @@ import axios from "axios";
 export default {
   data() {
     return {
-      isLoggedIn: false, // Set this value based on the user's authentication status
+      isLoggedIn: true, // Set this value based on the user's authentication status
     };
   },
 
   methods: {
-    async logout() {
+  async logout() {
+    try {
+      // Making an API request to log out
       const response = await axios.post("http://127.0.0.1:8000/api/logout", {});
-      // Perform logout logic here, e.g., making an API request to log out
 
-      // After successful logout, navigate to the home page
-      this.$router.push("/");
-    },
+      // Check the response for success (adjust this based on your API response format)
+      if (response.status === 200) {
+        // Redirect to the home page after successful logout
+        this.$router.push("");
+      } else {
+        // Handle logout failure, display a message to the user, etc.
+        console.error("Logout failed.");
+      }
+    } catch (error) {
+      // Handle any errors that occur during the request
+      console.error("An error occurred while logging out:", error);
+    }
   },
+},
+
 };
 </script>
 
