@@ -17,7 +17,7 @@
           </h4>
           <h3 id="mostProducedWasteProduct">
             Most produced waste product. <br />1. MSW <br />
-            2. Agricultural waste <br />3. Hazardous
+            2. Agricultural waste <br />3. Hazardous waste
           </h3>
         </div>
       </sliding-text>
