@@ -133,6 +133,7 @@
                           name="remember-me"
                           type="checkbox" /></span></label
                     ><br />
+                    
                     <input
                       type="submit"
                       name="submit"
@@ -140,6 +141,7 @@
                       value="Register"
                     />
                   </div>
+                  <div>By pressing register you are giving us the permission to show other companies your email address and business number so that they are able to reach out to you </div>
                 </div>
               </div>
             </form>
