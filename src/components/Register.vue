@@ -71,7 +71,8 @@
                       />
                     </div>
                     <div class="form-group">
-                      <label for="amount" class="text-info">Amount:</label
+                      <label for="amount" class="text-info"
+                        >Amount in tones:</label
                       ><br />
                       <input
                         autocomplete="off"
@@ -133,7 +134,7 @@
                           name="remember-me"
                           type="checkbox" /></span></label
                     ><br />
-                    
+
                     <input
                       type="submit"
                       name="submit"
@@ -141,7 +142,11 @@
                       value="Register"
                     />
                   </div>
-                  <div>By pressing register you are giving us the permission to show other companies your email address and business number so that they are able to reach out to you </div>
+                  <div>
+                    By pressing register you are giving us the permission to
+                    show other companies your email address and business number
+                    so that they are able to reach out to you.
+                  </div>
                 </div>
               </div>
             </form>
