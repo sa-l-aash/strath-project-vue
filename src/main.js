@@ -1,6 +1,8 @@
+//here we import a specific function from the "vue-router" library that are used for routing
 import { createRouter, createWebHistory } from "vue-router";
+//here we import a function called createApp from the "vue" library which creates a new Vue.js application instance.
 import { createApp } from "vue";
-//here we import our various pages
+//here we import our various components
 import App from "./App.vue";
 import home from "./components/Home.vue";
 import login from "./components/Login.vue";
