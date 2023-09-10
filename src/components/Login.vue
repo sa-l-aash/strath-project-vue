@@ -95,7 +95,6 @@ export default {
         email: this.email,
         password: this.password,
       });
-      console.log("trying to authenticate", this.name);
       const token = response.data.token;
       localStorage.setItem("authToken", token);
       setTimeout(() => {
