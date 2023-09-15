@@ -38,7 +38,8 @@
 <script>
 //importing the navigation bar
 import navigationbar from "./Navigation.vue";
-import SlidingText from "./SlidingText.vue"; // Import the SlidingText component
+// Import the SlidingText component
+import SlidingText from "./SlidingText.vue"; 
 export default {
   data() {
     return {
