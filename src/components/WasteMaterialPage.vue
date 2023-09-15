@@ -5,7 +5,7 @@
       <!-- this is the search bar specifically for this page only -->
       <div class="search">
         <input v-model="searchQuery" placeholder="Search..." />
-        <button @click="search">Search</button>
+        <button @click="search" type="search" aria-label="Search">Search</button>
       </div>
       <!-- this table displays company details allowing other companies to contact them -->
       <table class="table table-hover">
@@ -103,8 +103,13 @@ export default {
 };
 </script>
 <style scoped>
+.search {
+  display: flex;
+  padding-left: 100%;
+  justify-content: right;
+}
 .site {
-  /* background-image: url("https://images.pexels.com/photos/2952809/pexels-photo-2952809.jpeg?auto=compress&cs=tinysrgb&w=600"); */
+  /* background-image: url("https://images.pexels.com/photos/2952809/pexels-photo-2952809.jpeg?auto=compress&cs=tinysrgb&w=600");  */
   background-repeat: no-repeat;
   background-size: cover;
   height: 900px;
@@ -112,7 +117,7 @@ export default {
 }
 
 .content {
-  color: ghostwhite;
+  color: rgb(255, 255, 255);
   margin-top: 50px;
   text-align: center;
 }
