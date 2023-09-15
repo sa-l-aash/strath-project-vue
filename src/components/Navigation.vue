@@ -69,26 +69,19 @@ export default {
   },
 
   methods: {
-  async logout() {
-    try {
-      // Making an API request to log out
-      const response = await axios.post("http://127.0.0.1:8000/api/logout", {});
+    async logout() {
+      try {
+        // Remove the authentication token from local storage
+        localStorage.removeItem("authToken");
 
-      // Check the response for success (adjust this based on your API response format)
-      if (response.status === 200) {
         // Redirect to the home page after successful logout
-        this.$router.push("");
-      } else {
-        // Handle logout failure, display a message to the user, etc.
-        console.error("Logout failed.");
+        this.$router.push("/");
+      } catch (error) {
+        // Handle any errors that occur during the logout process
+        console.error("An error occurred while logging out:", error);
       }
-    } catch (error) {
-      // Handle any errors that occur during the request
-      console.error("An error occurred while logging out:", error);
-    }
+    },
   },
-},
-
 };
 </script>
 
