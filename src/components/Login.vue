@@ -37,6 +37,7 @@
                       type="password"
                       name="password"
                       id="password"
+                      
                       class="form-control"
                       v-model="password"
                       required
